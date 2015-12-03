@@ -31,9 +31,10 @@ class TagCorrelationPlotter : public BaseBTagPlotter {
     double lowerBound1_, lowerBound2_;
     double upperBound1_, upperBound2_;
     bool createProfile_;
+
+    unsigned int mcPlots_;
     bool finalize_;
 
-    unsigned int mcPlots_; 
 
     bool doCTagPlots_;
 

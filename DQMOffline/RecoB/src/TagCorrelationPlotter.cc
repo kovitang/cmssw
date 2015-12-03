@@ -15,7 +15,7 @@ TagCorrelationPlotter::TagCorrelationPlotter(const std::string& tagName1, const 
   					     upperBound1_(pSet.getParameter<double>("Discr1End")),
   					     upperBound2_(pSet.getParameter<double>("Discr2End")),
                                              createProfile_(pSet.getParameter<bool>("CreateProfile")),
-                                             finalize_(finalize)
+                                             mcPlots_(mc),finalize_(finalize)
   {
   if(finalize_) return;  
   correlationHisto_ = new FlavourHistograms2D<double, double>("correlation" + theExtensionString, tagName2 + " discr vs " + tagName1 + " discr",
